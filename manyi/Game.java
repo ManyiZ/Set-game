@@ -130,9 +130,10 @@ class Table{
 //            deal(cs.get(i));
             deal();
         }
+        System.out.println();
+
         printTable();
         noSetOnTable = sets.isEmpty();
-        System.out.println();
     }
     void removeSelectedSet(int[] cardsSelected){
         removeSelectedSet(arrayToList(cardsSelected));
@@ -277,6 +278,7 @@ class Table{
      */
     void printTable(){
         int counter = 0;
+        System.out.println("------------------ Current Table ------------------");
         for (int i = 0; i < 4; i++){
             for (int j = 0; j < 4; j++){
                 System.out.print(Arrays.toString(table[counter].getCard()) + " ");
@@ -284,8 +286,9 @@ class Table{
             }
             System.out.println();
             if (counter < 15 && table[counter] == null)
-                return;
+                break;
         }
+        System.out.println("---------------------------------------------------");
     }
     void printSetsFound(){
         if (noSetOnTable) {
