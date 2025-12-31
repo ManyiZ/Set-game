@@ -2,15 +2,17 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args){
-        Set game = new Set();
+        Game game = new Game();
         game.startGame();
         game.currentBoard();
-
-        Scanner scanner = new Scanner(System.in);
-        String cards = scanner.nextLine();
+        game.findCurrentSets();
+        game.automateRound();
 
 
         /*
+        Scanner scanner = new Scanner(System.in);
+        String cards = scanner.nextLine();
+
         printDealt();
         printUndealt();
          */
